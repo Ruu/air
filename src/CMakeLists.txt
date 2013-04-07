@@ -1,0 +1,7 @@
+set(AIR_LIBRARY "airlog")
+set(AIR_LIBRARIES ${AIR_LIBRARY} pthread PARENT_SCOPE)
+
+include_directories(${AIR_INCLUDE_DIRECTORIES})
+
+file(GLOB_RECURSE AIR_SOURCES "*.cpp")
+add_library(${AIR_LIBRARY} STATIC ${AIR_SOURCES})
